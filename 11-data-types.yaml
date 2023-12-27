@@ -1,6 +1,6 @@
 - name: data types
   hosts: localhost
-  become: yes
+  become: no
   vars: 
     NAME: Sri  # key value
     SKILLS:  # this is list
@@ -16,13 +16,13 @@
     tasks: 
       - name: print key value pair
         ansible.builtin.debug:
-          msg: "name: {{NAME}}"
+          msg: "name: {{vars.NAME}}"
       - name: print list
         ansible.builtin.debug: 
-          msg: "skills: {{SKILLS}}"
+          msg: "skills: {{vars.SKILLS}}"
       - name: print map 
         ansible.builtin.debug: 
-          msg: "Experience: {{EXPERIENCE}}"
+          msg: "Experience: {{vars.EXPERIENCE}}"
       - name: print boolean 
         ansible.builtin.debug:
-          msg: "Handson: {{HANDSON}}"
+          msg: "Handson: {{vars.HANDSON}}"
