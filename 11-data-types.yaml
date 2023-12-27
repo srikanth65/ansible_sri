@@ -13,7 +13,7 @@
       AWS: 6
       DOCKER: 3
     HANDSON: True # boolean 
-    tasks: 
+  tasks: 
       - name: print key value pair
         ansible.builtin.debug:
           msg: "name: {{vars.NAME}}"
