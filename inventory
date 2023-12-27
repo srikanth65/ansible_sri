@@ -1,9 +1,10 @@
 [web]
 3.86.164.157
 
-[catalogue]
-3.86.164.159
+[local]
+localhost 
 
-[mysql]
-3.86.164.189
+[local:vars]
+USERNAME="SRI"
+COMMAND="df -H"
 

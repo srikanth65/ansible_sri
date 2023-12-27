@@ -1,0 +1,7 @@
+- name: variables from inventory
+  hosts: localhost
+  become: no
+  tasks: 
+    - name: check variables from inventory
+      ansible.builtin.debug:
+        msg: "username is {{USERNAME}} command is {{COMMAND}}"

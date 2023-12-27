@@ -1,0 +1,13 @@
+- name: loops map
+  hosts: localhost
+  become: yes
+  tasks: 
+    - name: loops with map 
+      ansible.builtin.package: 
+         name: { "item.name" }
+         state: { "item.state" }
+      loop: 
+        - { name: "nginx", state: "present" }
+        - { name: "git", state: "present"}
+        - { name: "ansible" , state: "absent" }
+

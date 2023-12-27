@@ -1,0 +1,28 @@
+- name: data types
+  hosts: localhost
+  become: yes
+  vars: 
+    NAME: Sri  # key value
+    SKILLS:  # this is list
+      - AWS
+      - K8s
+      - Linux
+      - Ansible 
+    EXPERIENCE: # this is map
+      DEVOPS: 4
+      AWS: 6
+      DOCKER: 3
+    HANDSON: True # boolean 
+    tasks: 
+      - name: print key value pair
+        ansible.builtin.debug:
+          msg: "name: {{NAME}}"
+      - name: print list
+        ansible.builtin.debug: 
+          msg: "skills: {{SKILLS}}"
+      - name: print map 
+        ansible.builtin.debug: 
+          msg: "Experience: {{EXPERIENCE}}"
+      - name: print boolean 
+        ansible.builtin.debug:
+          msg: "Handson: {{HANDSON}}"

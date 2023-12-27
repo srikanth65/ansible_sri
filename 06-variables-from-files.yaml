@@ -1,0 +1,10 @@
+- name: variables from files
+  hosts: localhost
+  become: no
+  vars_files: 
+    - variables.yaml
+  tasks: 
+    - name: check variables
+      ansible.builtin.debug: 
+        msg: cidr_blocks["production"]["stagging"]
+  

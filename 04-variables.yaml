@@ -1,0 +1,16 @@
+- name: variables
+  hosts: localhost
+  become: no
+  vars: 
+    cidr_blocks:
+      production:
+        vpc_cidr: "172.31.0.0/16"
+      stagging:
+        vpc_cidr: "10.0.0.0/24"
+
+  tasks:
+    - name: variables task
+      ansible.builtin.debug:
+        msg: cidr_blocks['production']['vpc_cidr']
+
+# https://spacelift.io/blog/ansible-variables 

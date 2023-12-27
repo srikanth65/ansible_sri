@@ -1,0 +1,17 @@
+- name: variables in tasks
+  hosts: localhost
+  become: no
+  vars: 
+    cidr_blocks:
+      production:
+        cidr_vpc: "172.32.0.0/16"
+      stagging:
+        cidr_vpc: "10.0.1.0/24"
+  tasks:
+    - name: tasks variables
+      vars:
+        cidr_blocks:
+          production:
+            cidr_vpc: "172.33.0.0/16"
+      ansible.builtin.debug:
+        msg: cidr_blocks["production"]["stagging"]
