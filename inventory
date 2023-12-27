@@ -1,10 +1,10 @@
 [web]
 3.86.164.157
 
-[local]
+[localhost]
 localhost 
 
-[local:vars]
+[localhost:vars]
 USERNAME="SRI"
 COMMAND="df -H"
 
