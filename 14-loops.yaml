@@ -6,7 +6,7 @@
       ansible.builtin.package: 
         name: "{{item}}"
         state: present
-        enabled: yes 
+        #enabled: yes 
       loop: 
         - git 
         - mysql
