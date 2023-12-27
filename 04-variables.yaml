@@ -14,3 +14,4 @@
         msg: "{{cidr_blocks.production.vpc_cidr}}"
 
 # https://spacelift.io/blog/ansible-variables 
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html

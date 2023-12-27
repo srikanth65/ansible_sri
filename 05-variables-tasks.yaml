@@ -14,4 +14,4 @@
           production:
             cidr_vpc: "172.33.0.0/16"
       ansible.builtin.debug:
-        msg: cidr_blocks["production"]["stagging"]
+        msg: "{{cidr_blocks.production.cidr_vpc}}"
