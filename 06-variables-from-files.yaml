@@ -6,5 +6,5 @@
   tasks: 
     - name: check variables
       ansible.builtin.debug: 
-        msg: "{{cidr_blocks.production.cidr_vpc}}"
+        msg: "{{cidr_blocks.production.vpc_cidr}}"
   
