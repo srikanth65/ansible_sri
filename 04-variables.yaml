@@ -11,6 +11,6 @@
   tasks:
     - name: variables task
       ansible.builtin.debug:
-        msg: cidr_blocks[production][vpc_cidr]
+        msg: {{cidr_blocks.production.vpc_cidr}}
 
 # https://spacelift.io/blog/ansible-variables 
