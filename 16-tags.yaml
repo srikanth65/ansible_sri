@@ -16,3 +16,6 @@
         msg: "Hello AWS"
       tags: 
         - aws 
+
+    # ansible-playbook 16-tags.yaml 
+    # ansible-playbook -t devops 16-tags.yaml 
