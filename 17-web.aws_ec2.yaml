@@ -1,0 +1,17 @@
+# https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html
+
+plugin: amazon.aws.aws_ec2
+regions: 
+  - us-east-1 
+filters: 
+tag:Name:
+  - web 
+
+# how to run the command 
+# ansible-inventory -i 17-web.aws_ec2.yaml
+# Aws python modules: 
+# Ansible —version 
+# python(TAB)
+# Sudo yum list | grep pip    # look for same python version of pip 
+# Sudo yum install python3.11-pip.noarch -y 
+# pip3.11 install boto3 botocore 
