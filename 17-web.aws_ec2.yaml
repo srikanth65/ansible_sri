@@ -4,11 +4,11 @@ plugin: amazon.aws.aws_ec2
 regions: 
   - us-east-1 
 filters: 
-tag:Name:
-  - web 
+  tag:Name:
+    - web 
 
 # how to run the command 
-# ansible-inventory -i 17-web.aws_ec2.yaml
+# ansible-inventory -i 17-web.aws_ec2.yaml --list 
 # Aws python modules: 
 # Ansible —version 
 # python(TAB)
